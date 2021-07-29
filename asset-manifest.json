@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/Water-flow-simulator/static/css/main.a617e044.chunk.css",
-    "main.js": "/Water-flow-simulator/static/js/main.d96d0488.chunk.js",
-    "main.js.map": "/Water-flow-simulator/static/js/main.d96d0488.chunk.js.map",
-    "runtime-main.js": "/Water-flow-simulator/static/js/runtime-main.1d26bd6b.js",
-    "runtime-main.js.map": "/Water-flow-simulator/static/js/runtime-main.1d26bd6b.js.map",
-    "static/js/2.51e76351.chunk.js": "/Water-flow-simulator/static/js/2.51e76351.chunk.js",
-    "static/js/2.51e76351.chunk.js.map": "/Water-flow-simulator/static/js/2.51e76351.chunk.js.map",
-    "static/js/3.b456e9b9.chunk.js": "/Water-flow-simulator/static/js/3.b456e9b9.chunk.js",
-    "static/js/3.b456e9b9.chunk.js.map": "/Water-flow-simulator/static/js/3.b456e9b9.chunk.js.map",
+    "main.js": "/Water-flow-simulator/static/js/main.c8a2ba8a.chunk.js",
+    "main.js.map": "/Water-flow-simulator/static/js/main.c8a2ba8a.chunk.js.map",
+    "runtime-main.js": "/Water-flow-simulator/static/js/runtime-main.1b0e2509.js",
+    "runtime-main.js.map": "/Water-flow-simulator/static/js/runtime-main.1b0e2509.js.map",
+    "static/js/2.89de9a2b.chunk.js": "/Water-flow-simulator/static/js/2.89de9a2b.chunk.js",
+    "static/js/2.89de9a2b.chunk.js.map": "/Water-flow-simulator/static/js/2.89de9a2b.chunk.js.map",
+    "static/js/3.bc8efbbf.chunk.js": "/Water-flow-simulator/static/js/3.bc8efbbf.chunk.js",
+    "static/js/3.bc8efbbf.chunk.js.map": "/Water-flow-simulator/static/js/3.bc8efbbf.chunk.js.map",
     "index.html": "/Water-flow-simulator/index.html",
     "static/css/main.a617e044.chunk.css.map": "/Water-flow-simulator/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.51e76351.chunk.js.LICENSE.txt": "/Water-flow-simulator/static/js/2.51e76351.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/Water-flow-simulator/static/media/logo.6ce24c58.svg"
+    "static/js/2.89de9a2b.chunk.js.LICENSE.txt": "/Water-flow-simulator/static/js/2.89de9a2b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1d26bd6b.js",
-    "static/js/2.51e76351.chunk.js",
+    "static/js/runtime-main.1b0e2509.js",
+    "static/js/2.89de9a2b.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.d96d0488.chunk.js"
+    "static/js/main.c8a2ba8a.chunk.js"
   ]
 }
