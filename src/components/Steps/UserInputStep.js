@@ -1,10 +1,12 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Slider from '@material-ui/core/Slider';
-import Typography from '@material-ui/core/Typography';
-import { Button, Grid } from '@material-ui/core';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Button, Grid, Slider, Typography } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { updateRows, updateColumns, updateObstructions } from '../store/simulator/action'
+import {
+  updateRows,
+  updateColumns,
+  updateObstructions,
+} from "../../store/simulator/action";
 
 const useStyles = makeStyles({
   root: {
@@ -12,38 +14,37 @@ const useStyles = makeStyles({
   },
 });
 
-
-
-export default function Step1(props) {
+export default function UserInputStep(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { setCurrentStep } = props;
-  const {rows, columns, obstructions} = useSelector(({simulator})=> simulator);
+  const { rows, columns, obstructions } = useSelector(
+    ({ simulator }) => simulator
+  );
 
   const handleChange = (event, value) => {
     const id = event.target.id;
-    console.log(event.target.id, value)
+    console.log(event.target.id, value);
     if (id === "rows-slider") {
-      dispatch(updateRows(value))
-
+      dispatch(updateRows(value));
     } else if (id === "columns-slider") {
-      dispatch(updateColumns(value))
+      dispatch(updateColumns(value));
+    } else if (id === "obstruction-slider") dispatch(updateObstructions(value));
+  };
 
-    } else if (id === "obstruction-slider")
-      dispatch(updateObstructions(value))
-  }
   const handleNext = () => {
     setCurrentStep(1);
-  }
+  };
+
   return (
     <div className={classes.root}>
-      <Grid container spacing={2} direction="column">
+      <Grid container spacing={3} direction="column">
         <Grid item>
-        <Typography id="create-grid" variant="h6" gutterBottom>
+          <Typography align="center" id="create-grid" variant="h6" gutterBottom>
             Grid Creation
           </Typography>
         </Grid>
-        <Grid item >
+        <Grid item>
           <Typography id="rows-slider-label" gutterBottom>
             Number of rows
           </Typography>
@@ -78,7 +79,6 @@ export default function Step1(props) {
           />
         </Grid>
         <Grid item>
-
           <Typography id="obstruction-slider-label" gutterBottom>
             Number of obstruction
           </Typography>
@@ -97,8 +97,9 @@ export default function Step1(props) {
         </Grid>
 
         <Grid item>
-          <Button variant="contained" color="primary" onClick={handleNext}>Next</Button>
-
+          <Button variant="contained" color="primary" onClick={handleNext}>
+            Next
+          </Button>
         </Grid>
       </Grid>
     </div>
