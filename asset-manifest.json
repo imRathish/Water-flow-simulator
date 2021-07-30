@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Water-flow-simulator/static/css/main.a617e044.chunk.css",
-    "main.js": "/Water-flow-simulator/static/js/main.c8a2ba8a.chunk.js",
-    "main.js.map": "/Water-flow-simulator/static/js/main.c8a2ba8a.chunk.js.map",
+    "main.js": "/Water-flow-simulator/static/js/main.8b40d2e6.chunk.js",
+    "main.js.map": "/Water-flow-simulator/static/js/main.8b40d2e6.chunk.js.map",
     "runtime-main.js": "/Water-flow-simulator/static/js/runtime-main.1b0e2509.js",
     "runtime-main.js.map": "/Water-flow-simulator/static/js/runtime-main.1b0e2509.js.map",
     "static/js/2.89de9a2b.chunk.js": "/Water-flow-simulator/static/js/2.89de9a2b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1b0e2509.js",
     "static/js/2.89de9a2b.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.c8a2ba8a.chunk.js"
+    "static/js/main.8b40d2e6.chunk.js"
   ]
 }
