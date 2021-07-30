@@ -9,6 +9,10 @@ export default function Grid(props) {
   const { rows, columns, grid } = useSelector(({ simulator }) => simulator);
 
   useEffect(() => {
+    dispatch(updateGrid(initialiseGrid(rows, columns)));
+  }, []);
+
+  const initialiseGrid = (rows, columns) => {
     let initialGrid = [];
     for (let i = 0; i < rows + 1; i++) {
       initialGrid[i] = [];
@@ -16,35 +20,38 @@ export default function Grid(props) {
         initialGrid[i][j] = 0;
       }
     }
-    dispatch(updateGrid(initialGrid));
-  }, []);
+    return initialGrid;
+  };
 
-  let squares = [];
-  if (grid) {
-    for (let i = 0; i < grid.length; i++) {
-      let row = grid[i];
-      console.log(row);
-      for (let j = 0; j < row.length; j++) {
-        squares.push(
-          <div
-            key={i + "-" + j}
-            style={{
-              width: 100 / row.length + "%",
-              height: 100 / grid.length + "%",
-            }}
-          >
-            <Square
-              value={grid[i][j]}
-              x={i}
-              y={j}
-              isStartPoint={i === 0 ? true : false}
-              isSimulate={isSimulate}
-            />
-          </div>
-        );
+  const generateSquares = () => {
+    let squares = [];
+    if (grid) {
+      for (let i = 0; i < grid.length; i++) {
+        let row = grid[i];
+        console.log(row);
+        for (let j = 0; j < row.length; j++) {
+          squares.push(
+            <div
+              key={i + "-" + j}
+              style={{
+                width: 100 / row.length + "%",
+                height: 100 / grid.length + "%",
+              }}
+            >
+              <Square
+                value={grid[i][j]}
+                x={i}
+                y={j}
+                isStartPoint={i === 0 ? true : false}
+                isSimulate={isSimulate}
+              />
+            </div>
+          );
+        }
       }
     }
-  }
+    return squares;
+  };
 
   return (
     <div
@@ -55,7 +62,7 @@ export default function Grid(props) {
         flexWrap: "wrap",
       }}
     >
-      {squares}
+      {generateSquares()}
     </div>
   );
 }

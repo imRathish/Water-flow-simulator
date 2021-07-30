@@ -4,10 +4,8 @@ import {
   insertObstacle,
   simulateFlow,
   updateStartPoint,
-  updateCell,
 } from "../../store/simulator/action";
 import { useDispatch, useSelector } from "react-redux";
-import { simulateWaterFlow } from "../../store/simulator/util";
 
 export default function Square(props) {
   const { value, x, y, isStartPoint, isSimulate } = props;
@@ -28,26 +26,14 @@ export default function Square(props) {
   };
   useEffect(() => {
     if (startPoint) {
-        console.log(startPoint)
-      // const simulatedGrid = simulateWaterFlow(grid, startPoint)
-      // for(let i=0;i<rows+1;i++){
-      //     setTimeout(()=>{
-      //         for(let j=0;j<columns;j++){
-      //             if(simulatedGrid[i][j]===1){
-      //                 dispatch(updateCell(i,j,1))
-      //             }
-      //         }
-      //     },1000)
-
-      // }
       dispatch(simulateFlow());
     }
   }, [startPoint]);
 
   const computeBGColour = () => {
     if (value === 1) {
-        return "#2B78E3";
-      }
+      return "#2B78E3";
+    }
     if (isStartPoint) {
       return "#cadef9";
     }
@@ -57,7 +43,6 @@ export default function Square(props) {
     if (value === -1) {
       return "black";
     }
-   
 
     return "white";
   };
@@ -69,7 +54,6 @@ export default function Square(props) {
         return;
       }
       const item = monitor.getItem();
-      console.log(item);
       dispatch(insertObstacle(x, y, item.value));
     },
     collect: (monitor) => ({
@@ -88,7 +72,7 @@ export default function Square(props) {
 
   return (
     <div
-      ref={(!isStartPoint && value !== -1) ? drop : null}
+      ref={!isStartPoint && value !== -1 ? drop : null}
       style={{
         backgroundColor: computeBGColour(), //StartPoint ? "blue" : isOver ? "green" : squareColor,
         cursor: isStartPoint && isSimulate ? "pointer" : "default",
